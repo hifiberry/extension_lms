@@ -3,10 +3,10 @@ services:
   lms:
     container_name: lms
     restart: always
-    #image: ghcr.io/hifiberry/extension_lms:latest
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/hifiberry/extension_lms:latest
+    #build:
+    #  context: .
+    #  dockerfile: Dockerfile
     ports:
       - 9000:9000
       - 9090:9090
