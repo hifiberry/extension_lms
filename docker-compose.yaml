@@ -1,0 +1,17 @@
+version: '3'
+services:
+  lms:
+    container_name: lms
+    restart: always
+    #image: ghcr.io/hifiberry/extension_lms:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 9000:9000
+      - 9090:9090
+      - 3483:3483
+    volumes:
+      - /data/extensiondata/lms/prefs:/mnt/prefs
+      - /data/extensiondata/lms/logs:/mnt/logs
+      - /data/library:/library

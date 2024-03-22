@@ -1,0 +1,7 @@
+#!/bin/bash
+
+if [ ! -d /data/extensiondata/lms/prefs ]; then
+  mkdir -p /data/extensiondata/lms/prefs
+  mkdir -p /data/extensiondata/lms/logs
+  chown 9000 /data/extensiondata/lms/*
+fi
